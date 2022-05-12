@@ -5,12 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src="logs/sweetalert2/jquery-3.6.0.min.js"></script>
-    <script src="logs/sweetalert2/sweetalert2.all.min.js"></script>
+    <script src="../logs/sweetalert2/jquery-3.6.0.min.js"></script>
+    <script src="../logs/sweetalert2/sweetalert2.all.min.js"></script>
 </head>
 <body>
     <?php
-    include('config.php');
+    include('../config.php');
     if (isset($_SESSION['status']) && $_SESSION['status'] !='' ) 
     {
         ?>

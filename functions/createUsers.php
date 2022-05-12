@@ -1,5 +1,5 @@
 <?php 
-include('config.php');
+include('../config.php');
 // ON RECUPERE LES DONNEES DU FORMULAIRE ET ON LES RANGE PROPREMENT DANS DES VARIABLES
 if(isset($_POST['submitbtn'])){
     $name = htmlspecialchars($_POST['name']);
@@ -28,41 +28,41 @@ if(isset($_POST['submitbtn'])){
                                    $requete->execute(array($name,  $email1 , $password1));
                                    $_SESSION['status'] = "Account Create Successfully";
                                    $_SESSION['status_code'] = "success";
-                                   header('Location: /LOGINPROJECT/login.php');
+                                   header('Location: /LOGINPROJECT/formulaires/login.php');
                            }else{
-                                  $_SESSION['status'] = "The Two Passwords are not Conform";
+                                  $_SESSION['status'] = "The Two Passwords are not Conforms";
                                   $_SESSION['status_code'] = "error";
-                                  header('Location: /LOGINPROJECT/register.php');
+                                  header('Location: /LOGINPROJECT/formulaires/register.php');
                                 }
                         } else {
                             $_SESSION['status'] = "email already exists";
                             $_SESSION['status_code'] = "error";
-                            header('Location: /LOGINPROJECT/login.php');
+                            header('Location: /LOGINPROJECT/formulaires/login.php');
                         }
                         
 
                     }else{
                 $_SESSION['status'] = "Invalid Email";
                 $_SESSION['status_code'] = "error";
-                header('Location: /LOGINPROJECT/register.php');
+                header('Location: /LOGINPROJECT/formulaires/register.php');
             }
 
                 }else{
-                $_SESSION['status'] = "The two Emails are not Conform";
+                $_SESSION['status'] = "The two Emails are not Conforms";
                 $_SESSION['status_code'] = "error";
-                header('Location: /LOGINPROJECT/register.php');
+                header('Location: /LOGINPROJECT/formulaires/register.php');
             }
                 
             }else{
                 $_SESSION['status'] = "Oups your Pseudo Lenght is to Long";
                 $_SESSION['status_code'] = "error";
-                header('Location: /LOGINPROJECT/register.php');
+                header('Location: /LOGINPROJECT/formulaires/register.php');
             }
 
         }else{
             $_SESSION['status'] = "Please Fill All the boxes";
             $_SESSION['status_code'] = "error";
-            header('Location: /LOGINPROJECT/register.php');
+            header('Location: /LOGINPROJECT/formulaires/register.php');
         }
        
 
@@ -70,6 +70,6 @@ if(isset($_POST['submitbtn'])){
     } else {
         $_SESSION['status'] ="Unknow error";
         $_SESSION['status_code'] = "error";
-        header('Location: /LOGINPROJECT/register.php');
+        header('Location: /LOGINPROJECT/formulaires/register.php');
     }
 }   
