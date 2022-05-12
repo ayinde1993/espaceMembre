@@ -27,7 +27,7 @@
 			      		<h4>Login into your account</h4>
 			   		</div>
 			    		<!-- Form -->
-					<form class="px-3">
+					<form class="px-3" method="POST"  action="../functions/login.php">
 						<!-- Input Box -->
 						<div class="form-input">
 							<span><i class="fa fa-envelope-o"></i></span>
@@ -35,7 +35,7 @@
 						</div>
 						<div class="form-input">
 							<span><i class="fa fa-lock"></i></span>
-							<input type="password" name="" placeholder="Password" >
+							<input type="password" name="password" placeholder="Password" >
 						</div>
 						<div class="row mb-3">
 							<!-- Remember Checkbox -->
@@ -48,7 +48,7 @@
 			 	   		</div>
 			 	   				 <!-- Login Button -->
 			     	 	<div class="mb-3"> 
-							<button type="submit" class="btn btn-block">Login</button>
+							<button type="submit" name="submit" class="btn btn-block">Login</button>
 						</div>
 						<div class="row">
 							<div class="text-right ">
