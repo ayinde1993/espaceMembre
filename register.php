@@ -9,8 +9,6 @@
 	<link href="style.css" rel="stylesheet" type="text/css">
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-
-
 </head>
 <body>
 	
@@ -31,27 +29,27 @@
 				   	 <h4>Create an account</h4>
 				  	</div>
 					<!-- Form -->
-					<form class="px-3"  method="POST" action="createUser.php">
+					<form class="px-3"  method="POST" action="createUsers.php">
 						<!-- Input Box -->
 						<div class="form-input">
 							<span><i class="fa fa-user-o"></i></span>
-							<input type="text" name="name" placeholder="Full Name" value="<?php if(isset($name)) {echo $name;}?>"  >
+							<input type="text" name="name" placeholder="Full Name" value="<?php if(isset($name)){echo $name;} ?>">
 						</div>
 						<div class="form-input">
 							<span><i class="fa fa-envelope-o"></i></span>
-							<input type="email" name="email" placeholder="Email Address" value="<?php if(isset($email)) {echo $email;}?>" >
+							<input type="email" name="email" placeholder="Email Address">
 						</div>
 						<div class="form-input">
 							<span><i class="fa fa-envelope-o"></i></span>
-							<input type="email" name="confEmail" placeholder="Confirm Email Address" value="<?php if(isset($confEmail)) {echo $confEmail;}?>" >
+							<input type="email" name="confEmail" placeholder="Confirm Email Address">
 						</div>
 						<div class="form-input">
 							<span><i class="fa fa-lock"></i></span>
-							<input type="Password" name="password" placeholder="Password" value="<?php if(isset($password)) {echo $password;}?>" >
+							<input type="Password" name="password" placeholder="Password">
 						</div>
 						<div class="form-input">
 							<span><i class="fa fa-lock"></i></span>
-							<input type="Password" name="confPassword" placeholder="Confirm Password"  value="<?php if(isset($confPassword)) {echo $confPassword;}?>" >
+							<input type="Password" name="confPassword" placeholder="Confirm Password">
 						</div>
 						<!-- Register Button -->
 				    	<div class="mb-3"> 
@@ -69,7 +67,7 @@
 							<a href="" class="btn btn-social btn-twitter">twitter</a>
 						</div>
 						<div class="text-center mb-5 text-white">Already have an account?
-							<a class="login-link" href="login.html">Login here</a>
+							<a class="login-link" href="login.php">Login here</a>
 		       			</div>
 					</form>
 				</div>
@@ -77,6 +75,6 @@
 			<!-- FORM CONTAINER END -->
 		</div>
 	</div>
-	<?php include('errorSms.php') ?>
+<?php include('errorSms.php') ?>
 </body>
 </html>

@@ -64,6 +64,7 @@
 			</div>
 			<!-- FORM CONTAINER END -->
 		</div>
-	</div>	
+	</div>
+	<?php include('errorSms.php') ?>	
 </body>
 </html>
